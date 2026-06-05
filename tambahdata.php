@@ -12,28 +12,33 @@
                 <tr>
                     <td><label for="nama">Nama</label></td>
                     <td>:</td>
-                    <td><input type="text" id="nama" name="nama"/></td>
+                    <td><input type="text" id="nama" name="nama" required/></td>
                 </tr>
                   <tr>
-                    <td><label for="Foto">Foto</label></td>
+                    <td><label for="nim">NIM</label></td>
                     <td>:</td>
-                    <td><input type="file" id="Foto" name="Foto"/></td>
+                    <td><input type="number" id="nim" name="nim" required/></td>
                 </tr>
                  <tr>
-                    <td><label for="UTS">UTS</label></td>
+                    <td><label for="jurusan">Jurusan</label></td>
                     <td>:</td>
-                    <td><input type="number" id="UTS" name="UTS"/></td>
+                    <td><input type="text" id="jurusan" name="jurusan" required/></td>
                 </tr>
                  <tr>
-                    <td><label for="UAS">UAS</label></td>
+                    <td><label for="email">Email</label></td>
                     <td>:</td>
-                    <td><input type="number" id="UAS" name="UAS"/></td>
+                    <td><input type="email" id="email" name="email" required/></td>
                 </tr>
                  <tr>
-                    <td><label for="TUGAS">TUGAS</label></td>
+                    <td><label for="no_hp">No HP</label></td>
                     <td>:</td>
-                    <td><input type="number" id="TUGAS" name="TUGAS"/></td>
+                    <td><input type="number" id="no_hp" name="no_hp" required/></td>
                 </tr>
+                    <tr>
+                        <td><label for="foto">Foto</label></td>
+                        <td>:</td>
+                        <td><input type="file" id="foto" name="foto" required/></td>
+                    </tr>
                 <tr>
                     <td colspan="3"><button type="submit" name="submit">Tambah</button></td>
                 </tr>
@@ -41,7 +46,7 @@
         </form>
         <br>
         <hr>
-        <table cellpadding="3">
+        <!-- <table cellpadding="3">
             <tr>
                 <td><label for="nama">Nama</label></td>
                 <td>:</td>
@@ -130,6 +135,6 @@
             </tr>
             <tr>
                 <td colspan="3"><button type="submit" name="submit">Tambah</button></td>
-        </table>
+        </table> -->
     </body>
 </html>

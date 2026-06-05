@@ -1,3 +1,10 @@
+<?php
+require "fungsi.php";
+$qmhs = "SELECT * FROM mahasiswa";
+$mahasiswas = tampildata($qmhs);
+?>
+
+
 <!DOCTYPE html>
 <html>
      <head>
@@ -28,40 +35,74 @@
          </a>
          <table border="1" cellpadding="10">
             <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Nama</th>
-                <th rowspan="2">foto</th>
-                <th colspan="3">Nilai</th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>No HP</th>
+                <th>Foto</th>
+                <th>Aksi</th>
             </tr>
-            <tr>
-                <th>UAS</th>
-                <th>UTS</th>
-                <th>TUGAS</th>
-            </tr>
-            <tr>
+
+            <?php
+            $i = 1;
+            foreach ($mahasiswas as $mhs) {
+                echo "<tr>";
+                echo "<td>" . $i++ . "</td>";
+                echo "<td>" . $mhs["nama"] . "</td>";
+                echo "<td>" . $mhs["nim"] . "</td>";
+                echo "<td>" . $mhs["jurusan"] . "</td>";
+                echo "<td>" . $mhs["email"] . "</td>";
+                echo "<td>" . $mhs["no_hp"] . "</td>";
+                echo "<td><img src='asset/img/" . $mhs["foto"] . "' alt='Foto " . $mhs["nama"] . "' width='60px'/></td>";
+                echo "<td>
+                        <a href='editdata.php?id=" . $mhs["id"] . "'><button>Edit</button></a> |
+                        <a href='hapusdata.php?id=" . $mhs["id"] . "' onclick=\"return confirm('Apakah Anda yakin ingin menghapus data ini?')\"><button>Hapus</button></a>
+                      </td>";
+                echo "</tr>";
+            }
+            ?>
+        
+            <!-- <tr>
                 <td>1</td>
                 <td>Radit</td>
+                <td>111100001</td>
+                <td>Informatika</td>
+                <td>radit@example.com</td>
+                <td>08123456789</td>
                 <td><img src="asset/img/Radit.png" alt="Foto Radit" width="60px"/></td>
-                <td align="center">85</td>
-                <td align="center">80</td>
-                <td align="center">90</td>
+                <td>
+                    <a href="editdata.php?id=1"><button>Edit</button></a> |
+                    <a href="hapusdata.php?id=1" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><button>Hapus</button></a>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Rizky</td>
+                <td>111100002</td>
+                <td>Informatika</td>
+                <td>rizky@example.com</td>
+                <td>08123456780</td>
                 <td><img src="asset/img/Rizky.png" alt="Foto Rizky" width="60px"/></td>
-                <td align="center">80</td>
-                <td align="center">75</td>
-                <td align="center">85</td>
+                <td>
+                    <a href="editdata.php?id=2"><button>Edit</button></a> |
+                    <a href="hapusdata.php?id=2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><button>Hapus</button></a>
+                </td>
             </tr>
             <tr>        
                 <td>3</td>
                 <td>Nikko</td>
+                <td>111100003</td>
+                <td>Informatika</td>
+                <td>nikko@example.com</td>
+                <td>08123456781</td>
                 <td><img src="asset/img/Nikko.png" alt="Foto Nikko" width="60px"/></td>
-                <td align="center">90</td>
-                <td align="center">85</td>
-                <td align="center">95</td>
-
+                <td>
+                    <a href="editdata.php?id=3"><button>Edit</button></a> |
+                    <a href="hapusdata.php?id=3" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><button>Hapus</button></a>
+                </td>
+            </tr> -->
          </table>
          <br>
          <hr>
