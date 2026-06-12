@@ -106,7 +106,7 @@ $mahasiswas = tampildata($qmhs);
          </table>
          <br>
          <hr>
-         <table border="1" cellpadding="50" cellspacing="2">
+         <!-- <table border="1" cellpadding="50" cellspacing="2">
             <tr>
                 <th align="center">1,1</th>
                 <th align="center">1,2</th>
@@ -128,6 +128,6 @@ $mahasiswas = tampildata($qmhs);
                 <th align="center">4,3</th>        
                 <th align="center">4,4</th>
             </tr>
-         </table>
+         </table> -->
      </body>
 </html>

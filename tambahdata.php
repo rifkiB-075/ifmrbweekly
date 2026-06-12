@@ -1,3 +1,23 @@
+<?php
+require "fungsi.php";
+if (isset($_POST["submit"])) {
+
+    if(tambahdata($_POST) > 0){
+        echo "<script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href = 'mahasiswa.php';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Data gagal ditambahkan!');
+              </script>";
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +27,7 @@
     </head>
     <body>
         <h2>Tambah Data Mahasiswa</h2>
-        <form action="mahasiswa.php" method="post">
+        <form action="" method="post">
             <table cellpadding="3">
                 <tr>
                     <td><label for="nama">Nama</label></td>
@@ -32,12 +52,12 @@
                  <tr>
                     <td><label for="no_hp">No HP</label></td>
                     <td>:</td>
-                    <td><input type="number" id="no_hp" name="no_hp" required/></td>
+                    <td><input type="number" id="nohp" name="no_hp" required/></td>
                 </tr>
                     <tr>
                         <td><label for="foto">Foto</label></td>
                         <td>:</td>
-                        <td><input type="file" id="foto" name="foto" required/></td>
+                        <td><input type="text" id="foto" name="foto" required/></td>
                     </tr>
                 <tr>
                     <td colspan="3"><button type="submit" name="submit">Tambah</button></td>
